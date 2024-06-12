@@ -54,11 +54,13 @@ function displayMarmoles(marmoles) {
     const container = document.getElementById('marmolContainer');
     container.innerHTML = ''; // Limpiar el contenedor
 
-    marmoles.forEach(({ imagen, nombre, localidad }) => {
+    marmoles.forEach(({ imagen, nombre, localidad, enlace }) => {
         const marmolDiv = document.createElement('div');
         marmolDiv.classList.add('col-md-4', 'marmol');
         marmolDiv.innerHTML = `
-            <img src="${imagen}" alt="${nombre}">
+            <a href="${enlace}" target="_blank">
+                <img src="${imagen}" alt="${nombre}">
+            </a>
             <h2>${nombre}</h2>
             <p>Localidad: ${localidad}</p>
             <p class="en-stock">En stock</p>
