@@ -27,13 +27,13 @@ function displayMarmoles(marmoles) {
     const container = document.getElementById('marmolContainer');
     container.innerHTML = ''; // Limpiar el contenedor
 
-    marmoles.forEach(marmol => {
+    marmoles.forEach(({ imagen, nombre, localidad }) => {
         const marmolDiv = document.createElement('div');
         marmolDiv.classList.add('col-md-4', 'marmol');
         marmolDiv.innerHTML = `
-            <img src="${marmol.imagen}" alt="${marmol.nombre}">
-            <h2>${marmol.nombre}</h2>
-            <p>Localidad: ${marmol.localidad}</p>
+            <img src="${imagen}" alt="${nombre}">
+            <h2>${nombre}</h2>
+            <p>Localidad: ${localidad}</p>
             <p class="en-stock">En stock</p>
         `;
         container.appendChild(marmolDiv);
@@ -46,11 +46,10 @@ function filterMarmoles() {
     const colorFilter = document.getElementById('colorFilter').value;
     const localidadFilter = document.getElementById('localidadFilter').value;
 
-    const filteredMarmoles = marmoles.filter(marmol => {
-        const matchesSearch = marmol.nombre.toLowerCase().includes(searchValue);
-        const matchesColor = colorFilter === '' || marmol.color === colorFilter;
-        const matchesLocalidad = localidadFilter === '' || marmol.localidad === localidadFilter;
-
+    const filteredMarmoles = marmoles.filter(({ nombre, color, localidad }) => {
+        const matchesSearch = nombre.toLowerCase().includes(searchValue);
+        const matchesColor = !colorFilter || color === colorFilter;
+        const matchesLocalidad = !localidadFilter || localidad === localidadFilter;
         return matchesSearch && matchesColor && matchesLocalidad;
     });
 
@@ -64,4 +63,4 @@ document.getElementById('colorFilter').addEventListener('change', filterMarmoles
 document.getElementById('localidadFilter').addEventListener('change', filterMarmoles);
 
 // Mostrar todos los mármoles al cargar la página
-displayMarmoles(marmoles);
+document.addEventListener('DOMContentLoaded', () => displayMarmoles(marmoles));
