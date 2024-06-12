@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Mármoles</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="my-4">
+            <h1 class="text-center">Catálogo de Mármoles</h1>
+        </header>
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <input type="text" id="search" class="form-control" placeholder="Buscar por nombre...">
+            </div>
+            <div class="col-md-3">
+                <select id="colorFilter" class="form-control">
+                    <option value="">Filtrar por color</option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="Crema">Crema</option>
+                    <option value="Beige">Beige</option>
+                    <option value="Rojo">Rojo</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Gris">Gris</option>
+                    <option value="Amarillo">Amarillo</option>
+                    <option value="Rosa">Rosa</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Marrón">Marrón</option>
+                    <option value="Dorado">Dorado</option>
+                    <option value="Multicolor">Multicolor</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select id="localidadFilter" class="form-control">
+                    <option value="">Filtrar por localidad</option>
+                    <option value="Varias Regiones">Varias Regiones</option>
+                    <option value="Almería">Almería</option>
+                    <option value="Alicante">Alicante</option>
+                    <option value="Valencia">Valencia</option>
+                    <option value="Castellón">Castellón</option>
+                    <option value="Murcia">Murcia</option>
+                    <option value="Jaén">Jaén</option>
+                    <option value="Sevilla">Sevilla</option>
+                    <option value="Granada">Granada</option>
+                    <option value="Badajoz">Badajoz</option>
+                    <option value="Vizcaya">Vizcaya</option>
+                    <option value="Zaragoza">Zaragoza</option>
+                    <option value="Huesca">Huesca</option>
+                    <option value="Ibiza">Ibiza</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <button id="searchButton" class="btn btn-primary btn-block">Buscar</button>
+            </div>
+        </div>
+        <div class="row" id="marmolContainer">
+            <!-- Aquí se insertarán los mármoles -->
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen1.jpg" alt="Blanco Carrara">
+                <h2>Blanco Carrara</h2>
+                <p>Localidad: Varias Regiones</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen2.jpg" alt="Blanco Almería">
+                <h2>Blanco Almería</h2>
+                <p>Localidad: Almería</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen3.jpg" alt="Blanco Macael">
+                <h2>Blanco Macael</h2>
+                <p>Localidad: Macael</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen4.jpg" alt="Blanco Ibiza">
+                <h2>Blanco Ibiza</h2>
+                <p>Localidad: Varias Regiones</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen5.jpg" alt="Blanco Tranco">
+                <h2>Blanco Tranco</h2>
+                <p>Localidad: Varias Regiones</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen6.jpg" alt="Crema Valencia">
+                <h2>Crema Valencia</h2>
+                <p>Localidad: Varias Regiones</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen7.jpg" alt="Crema Nacarado">
+                <h2>Crema Nacarado</h2>
+                <p>Localidad: Varias Regiones</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen8.jpg" alt="Crema Marfil">
+                <h2>Crema Marfil</h2>
+                <p>Localidad: Varias Regiones</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen9.jpg" alt="Crema Coto">
+                <h2>Crema Coto</h2>
+                <p>Localidad: Varias Regiones</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen10.jpg" alt="Crema Levante">
+                <h2>Crema Levante</h2>
+                <p>Localidad: Varias Regiones</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen11.jpg" alt="Beige Perlato">
+                <h2>Beige Perlato</h2>
+                <p>Localidad: Varias Regiones</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen12.jpg" alt="Beige Alhambra">
+                <h2>Beige Alhambra</h2>
+                <p>Localidad: Varias Regiones</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen13.jpg" alt="Beige Levante">
+                <h2>Beige Levante</h2>
+                <p>Localidad: Varias Regiones</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen14.jpg" alt="Beige Sierra Elvira">
+                <h2>Beige Sierra Elvira</h2>
+                <p>Localidad: Varias Regiones</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen15.jpg" alt="Rojo Levante">
+                <h2>Rojo Levante</h2>
+                <p>Localidad: Varias Regiones</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen16.jpg" alt="Rojo Alhambra">
+                <h2>Rojo Alhambra</h2>
+                <p>Localidad: Varias Regiones</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen17.jpg" alt="Rojo Alicante">
+                <h2>Rojo Alicante</h2>
+                <p>Localidad: Varias Regiones</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <div class="col-md-4 marmol">
+                <img src="ruta/a/imagen18.jpg" alt="Rojo Coralito">
+                <h2>Rojo Coralito</h2>
+                <p>Localidad: Varias Regiones</p>
+                <p class="en-stock">En stock</p>
+            </div>
+            <!-- Añadir más mármoles aquí -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
