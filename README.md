@@ -1,2 +1,2 @@
-# catalogo-marmoles
-Catálogo de Mármoles con filtros de color y localidad
+# catalogo-materiales
+Catálogo de materiles con filtros de color y localidad
